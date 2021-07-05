@@ -111,7 +111,7 @@ class AppDetailInfoView: UIView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            ratingInfoLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            ratingInfoLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
             ratingInfoLabel.topAnchor.constraint(equalTo: topAnchor),
             ratingInfoLabel.centerYAnchor.constraint(equalTo: ratingStarView.centerYAnchor),
             
@@ -120,14 +120,14 @@ class AppDetailInfoView: UIView {
             ratingStarView.heightAnchor.constraint(equalToConstant: 30),
             ratingStarView.widthAnchor.constraint(equalToConstant: 110),
             
-            subRatingLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            subRatingLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
             subRatingLabel.topAnchor.constraint(equalTo: ratingInfoLabel.bottomAnchor, constant: 5),
            
             sizeLabel.topAnchor.constraint(equalTo: topAnchor),
             sizeLabel.rightAnchor.constraint(equalTo: mbSizeLabel.leftAnchor),
             
             mbSizeLabel.bottomAnchor.constraint(equalTo: subsizeLabel.topAnchor, constant: -8),
-            mbSizeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            mbSizeLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: AppDetailConstants.rightIndent),
             
             subsizeLabel.topAnchor.constraint(equalTo: sizeLabel.bottomAnchor, constant: 5),
             subsizeLabel.centerXAnchor.constraint(equalTo: sizeLabel.centerXAnchor, constant: 5),

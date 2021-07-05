@@ -12,6 +12,8 @@
 		09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */; };
 		09AEE42A2693650300FBE233 /* AppDetailWhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */; };
 		09AEE42C269374F100FBE233 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09AEE42B269374F100FBE233 /* Localizable.stringsdict */; };
+		09AEE431269388DB00FBE233 /* AppDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */; };
+		09AEE4332693947100FBE233 /* AppDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4322693947100FBE233 /* AppDetailConstants.swift */; };
 		09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */; };
 		09ED2096269231C000BF3E83 /* AppDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */; };
 		09FB1B7B268F0DA0009257EC /* ThreadSaveMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */; };
@@ -45,6 +47,8 @@
 		09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewView.swift; sourceTree = "<group>"; };
 		09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewViewController.swift; sourceTree = "<group>"; };
 		09AEE42B269374F100FBE233 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
+		09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailPresenter.swift; sourceTree = "<group>"; };
+		09AEE4322693947100FBE233 /* AppDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailConstants.swift; sourceTree = "<group>"; };
 		09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoView.swift; sourceTree = "<group>"; };
 		09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoViewController.swift; sourceTree = "<group>"; };
 		09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSaveMemoryCache.swift; sourceTree = "<group>"; };
@@ -102,6 +106,14 @@
 				0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		09AEE42F269388CB00FBE233 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		3E03DA2743EDF39A6844C510 /* Pods */ = {
@@ -174,8 +186,10 @@
 		E0E1D2A72034A3780011E01A /* AppDetail */ = {
 			isa = PBXGroup;
 			children = (
+				09AEE42F269388CB00FBE233 /* Presenter */,
 				F8114FC222A3E74E00102830 /* View */,
 				F8114FC322A3E75300102830 /* Controller */,
+				09AEE4322693947100FBE233 /* AppDetailConstants.swift */,
 			);
 			path = AppDetail;
 			sourceTree = "<group>";
@@ -468,6 +482,8 @@
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
 				09AEE42A2693650300FBE233 /* AppDetailWhatsNewViewController.swift in Sources */,
 				09FB1B7F268F42FE009257EC /* AppDetailHeadViewController.swift in Sources */,
+				09AEE4332693947100FBE233 /* AppDetailConstants.swift in Sources */,
+				09AEE431269388DB00FBE233 /* AppDetailPresenter.swift in Sources */,
 				0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */,
 				0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */,
 			);

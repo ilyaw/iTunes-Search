@@ -12,6 +12,8 @@ final class AppDetailViewController: UIViewController {
     
     public var app: ITunesApp
     
+    private let presenter: AppDetailViewOutput
+    
     lazy var headerViewController = AppDetailHeadViewController(app: app)
     lazy var infoViewController = AppDetailInfoViewController(app: app)
     lazy var whatsNewViewController = AppDetailWhatsNewViewController(app: app)
@@ -28,6 +30,7 @@ final class AppDetailViewController: UIViewController {
     
     init(app: ITunesApp) {
         self.app = app
+        self.presenter = AppDetailPresenter()
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -61,7 +64,7 @@ final class AppDetailViewController: UIViewController {
         addChildInfoViewController()
         addChildWhatsNewViewController()
     }
-    
+
     private func addScrollView() {
         self.appDetailView.addSubview(scrollView)
         
@@ -86,7 +89,7 @@ final class AppDetailViewController: UIViewController {
             headerViewController.view.topAnchor.constraint(equalTo: self.scrollView.topAnchor),
             headerViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
             headerViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
-            headerViewController.view.heightAnchor.constraint(equalToConstant: 140)
+            headerViewController.view.heightAnchor.constraint(equalToConstant: AppDetailConstants.headerViewSize)
         ])
     }
     
@@ -101,7 +104,7 @@ final class AppDetailViewController: UIViewController {
             infoViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor, constant: 10.0),
             infoViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
             infoViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
-            infoViewController.view.heightAnchor.constraint(equalToConstant: 55)
+            infoViewController.view.heightAnchor.constraint(equalToConstant: AppDetailConstants.infoViewSize)
         ])
     }
     
@@ -112,16 +115,35 @@ final class AppDetailViewController: UIViewController {
         
         whatsNewViewController.view.translatesAutoresizingMaskIntoConstraints = false
         
+        let sizeText = presenter.getSizeText(text: app.releaseNotes ?? "")
+       
         NSLayoutConstraint.activate([
             whatsNewViewController.view.topAnchor.constraint(equalTo: self.infoViewController.view.bottomAnchor, constant: 10.0),
             whatsNewViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
             whatsNewViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
-            whatsNewViewController.view.heightAnchor.constraint(equalToConstant: 700),
+            whatsNewViewController.view.heightAnchor.constraint(equalToConstant: AppDetailConstants.whatsNewViewSize + sizeText.height),
             whatsNewViewController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
     
     
+    
+    
+//    private func qwe() {
+//        self.addChild(qweView)
+//        scrollView.addSubview(qweView.view)
+//        self.qweView.didMove(toParent: self)
+//
+//        qweView.view.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            qweView.view.topAnchor.constraint(equalTo: self.whatsNewViewController.view.bottomAnchor, constant: 10.0),
+//            qweView.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
+//            qweView.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
+//            qweView.view.heightAnchor.constraint(equalToConstant: 150),
+//            qweView.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+//        ])
+//    }
     
     
     
@@ -139,4 +161,8 @@ final class AppDetailViewController: UIViewController {
 //            self.appDetailView.imageView.image = image
 //        }
 //    }
+}
+
+extension AppDetailViewController: AppDetailViewInput {    
+    
 }

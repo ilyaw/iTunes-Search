@@ -77,19 +77,19 @@ class AppDetailHeaderView: UIView {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 12.0),
-            imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16.0),
+            imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
             imageView.heightAnchor.constraint(equalToConstant: 120),
             imageView.widthAnchor.constraint(equalToConstant: 120),
             
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 12.0),
-            titleLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 16.0),
-            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16.0),
+            titleLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: AppDetailConstants.leftIndent),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: AppDetailConstants.rightIndent),
             
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12.0),
             subtitleLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor),
             subtitleLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor),
             
-            openButton.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 16.0),
+            openButton.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: AppDetailConstants.leftIndent),
             openButton.bottomAnchor.constraint(equalTo: imageView.bottomAnchor),
             openButton.widthAnchor.constraint(equalToConstant: 80.0),
             openButton.heightAnchor.constraint(equalToConstant: 32.0),

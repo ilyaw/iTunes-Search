@@ -85,23 +85,21 @@ class AppDetailWhatsNewView: UIView {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
             
             versionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            versionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
+            versionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
             
             descriptionLabel.topAnchor.constraint(equalTo: versionLabel.bottomAnchor, constant: 10),
-            descriptionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            descriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            descriptionLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: AppDetailConstants.leftIndent),
+            descriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: AppDetailConstants.rightIndent),
 //            descriptionLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
             
             versionHistoryLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            versionHistoryLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            versionHistoryLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: AppDetailConstants.rightIndent),
             
             dateLabel.topAnchor.constraint(equalTo: versionHistoryLabel.bottomAnchor, constant: 10),
-            dateLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
-            
-            
+            dateLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: AppDetailConstants.rightIndent),
         ])
     }
 }
