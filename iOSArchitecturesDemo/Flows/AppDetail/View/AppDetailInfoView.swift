@@ -92,12 +92,7 @@ class AppDetailInfoView: UIView {
         super.init(coder: coder)
         setUI()
     }
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        backgroundColor = .white
-    }
+
     
     private func setUI() {
         self.addSubview(ratingStarView)
@@ -142,7 +137,6 @@ class AppDetailInfoView: UIView {
     
             subageRestrictionsLabel.topAnchor.constraint(equalTo: ageRestrictionsLabel.bottomAnchor, constant: 5),
             subageRestrictionsLabel.centerXAnchor.constraint(equalTo: ageRestrictionsLabel.centerXAnchor)
-        
         ])
     
     }

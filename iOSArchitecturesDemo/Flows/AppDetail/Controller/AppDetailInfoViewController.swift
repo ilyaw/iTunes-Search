@@ -11,7 +11,6 @@ import UIKit
 class AppDetailInfoViewController: UIViewController {
     
     private let app: ITunesApp
-//    private let imageLoader = ImageDownloader()
     
     private var appDetailInfoView: AppDetailInfoView {
         return self.view as! AppDetailInfoView
@@ -37,7 +36,6 @@ class AppDetailInfoViewController: UIViewController {
     }
     
     private func fillData() {
-       
         appDetailInfoView.ratingStarView.value = CGFloat(app.averageRating ?? 0)
         appDetailInfoView.ratingInfoLabel.text = String(format: "%.1f", app.averageRating ?? 0)
         
@@ -47,13 +45,6 @@ class AppDetailInfoViewController: UIViewController {
         }
         
         appDetailInfoView.ageRestrictionsLabel.text = app.ageRestrictions
-    
-
-        
-//        appDetailHeadView.titleLabel.text = app.appName
-//        appDetailHeadView.subtitleLabel.text = app.company
-        
-//        appDetailHeadView.ratingLabel.text = String(describing: app.averageRating ?? 0)
     }
 
 }

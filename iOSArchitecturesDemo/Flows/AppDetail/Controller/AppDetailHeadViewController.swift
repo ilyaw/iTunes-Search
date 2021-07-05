@@ -41,8 +41,6 @@ class AppDetailHeadViewController: UIViewController {
         
         appDetailHeadView.titleLabel.text = app.appName
         appDetailHeadView.subtitleLabel.text = app.company
-        
-//        appDetailHeadView.ratingLabel.text = String(describing: app.averageRating ?? 0)
     }
     
     private func downloadImage() {

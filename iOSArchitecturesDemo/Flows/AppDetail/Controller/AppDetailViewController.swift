@@ -14,6 +14,7 @@ final class AppDetailViewController: UIViewController {
     
     lazy var headerViewController = AppDetailHeadViewController(app: app)
     lazy var infoViewController = AppDetailInfoViewController(app: app)
+    lazy var whatsNewViewController = AppDetailWhatsNewViewController(app: app)
     
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -54,14 +55,11 @@ final class AppDetailViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         self.navigationItem.largeTitleDisplayMode = .never
         
-       
         addScrollView()
         
-        addChildViewController()
-        
-        // MARK: Добавить дочерный вью контроллер
-        addInfoController()
-        
+        addChildHeaderViewController()
+        addChildInfoViewController()
+        addChildWhatsNewViewController()
     }
     
     private func addScrollView() {
@@ -77,9 +75,8 @@ final class AppDetailViewController: UIViewController {
 
     }
     
-    private func addChildViewController() {
+    private func addChildHeaderViewController() {
         self.addChild(headerViewController)
-//        self.view.addSubview(headerViewController.view)
         scrollView.addSubview(headerViewController.view)
         self.headerViewController.didMove(toParent: self)
         
@@ -93,10 +90,8 @@ final class AppDetailViewController: UIViewController {
         ])
     }
     
-    private func addInfoController() {
+    private func addChildInfoViewController() {
         self.addChild(infoViewController)
-//        self.view.addSubview(infoViewController.view)
-
         scrollView.addSubview(infoViewController.view)
         self.infoViewController.didMove(toParent: self)
         
@@ -106,23 +101,27 @@ final class AppDetailViewController: UIViewController {
             infoViewController.view.topAnchor.constraint(equalTo: self.headerViewController.view.bottomAnchor, constant: 10.0),
             infoViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
             infoViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
-//            infoViewController.view.heightAnchor.constraint(equalToConstant: 500),
-            infoViewController.view.bottomAnchor.constraint(equalTo: self.scrollView.bottomAnchor)
-//            infoViewController.view.bottomAnchor.constraint(equalTo: headerViewController.view.bottomAnchor, constant: 500.0)
+            infoViewController.view.heightAnchor.constraint(equalToConstant: 55)
         ])
-        
-//        self.addChild(headerViewController)
-//        self.view.addSubview(headerViewController.view)
-//        self.headerViewController.didMove(toParent: self)
-//        
-//        headerViewController.view.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        NSLayoutConstraint.activate([
-//            headerViewController.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-//            headerViewController.view.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor),
-//            headerViewController.view.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor),
-//        ])
     }
+    
+    private func addChildWhatsNewViewController() {
+        self.addChild(whatsNewViewController)
+        scrollView.addSubview(whatsNewViewController.view)
+        self.whatsNewViewController.didMove(toParent: self)
+        
+        whatsNewViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            whatsNewViewController.view.topAnchor.constraint(equalTo: self.infoViewController.view.bottomAnchor, constant: 10.0),
+            whatsNewViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
+            whatsNewViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
+            whatsNewViewController.view.heightAnchor.constraint(equalToConstant: 700),
+            whatsNewViewController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
+    }
+    
+    
     
     
     

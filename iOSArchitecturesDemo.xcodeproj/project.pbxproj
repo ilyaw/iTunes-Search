@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE80268F739400F2E1C4 /* SearchPresenter.swift */; };
 		0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */; };
+		09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */; };
+		09AEE42A2693650300FBE233 /* AppDetailWhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */; };
+		09AEE42C269374F100FBE233 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09AEE42B269374F100FBE233 /* Localizable.stringsdict */; };
 		09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */; };
 		09ED2096269231C000BF3E83 /* AppDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */; };
 		09FB1B7B268F0DA0009257EC /* ThreadSaveMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		0908DE80268F739400F2E1C4 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBulder.swift; sourceTree = "<group>"; };
+		09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewView.swift; sourceTree = "<group>"; };
+		09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewViewController.swift; sourceTree = "<group>"; };
+		09AEE42B269374F100FBE233 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoView.swift; sourceTree = "<group>"; };
 		09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoViewController.swift; sourceTree = "<group>"; };
 		09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSaveMemoryCache.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				F8A1E0412248517B00FE6448 /* Model */,
 				E0E1D2A52034A3560011E01A /* Flows */,
 				E0E1D382203AE3140011E01A /* SupportingFiles */,
+				09AEE42B269374F100FBE233 /* Localizable.stringsdict */,
 			);
 			path = iOSArchitecturesDemo;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
 				09FB1B7C268F2C6E009257EC /* AppDetailHeaderView.swift */,
 				09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */,
+				09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +267,7 @@
 				E0E1D3D0203C48D70011E01A /* AppDetailViewController.swift */,
 				09FB1B7E268F42FE009257EC /* AppDetailHeadViewController.swift */,
 				09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */,
+				09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 			files = (
 				E0E1D29D2034A3350011E01A /* LaunchScreen.storyboard in Resources */,
 				E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */,
+				09AEE42C269374F100FBE233 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +449,7 @@
 				09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
+				09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
@@ -455,6 +466,7 @@
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
+				09AEE42A2693650300FBE233 /* AppDetailWhatsNewViewController.swift in Sources */,
 				09FB1B7F268F42FE009257EC /* AppDetailHeadViewController.swift in Sources */,
 				0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */,
 				0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */,

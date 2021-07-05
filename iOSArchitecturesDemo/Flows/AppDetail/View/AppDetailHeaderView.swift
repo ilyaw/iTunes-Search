@@ -35,15 +35,6 @@ class AppDetailHeaderView: UIView {
         return label
     }()
     
-//    private(set) lazy var ratingLabel: UILabel = {
-//        let label = UILabel()
-//        label.translatesAutoresizingMaskIntoConstraints = false
-//        label.textColor = .lightGray
-//        label.font = UIFont.boldSystemFont(ofSize: 20.0)
-//        label.numberOfLines = 2
-//        return label
-//    }()
-//
     private(set) lazy var openButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -55,12 +46,6 @@ class AppDetailHeaderView: UIView {
         return button
     }()
     
-//    private(set) lazy var infoStackView: UIStackView = {
-//        let stackView = UIStackView()
-//        stackView.axis = .horizontal
-//        return stackView
-//    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -71,16 +56,14 @@ class AppDetailHeaderView: UIView {
     required init?(coder: NSCoder) {
 //        fatalError("init(coder:) has not been implemented")
         super.init(coder: coder)
-//        setUI()
+        setUI()
     }
     
     private func setUI() {
         self.addSubview(imageView)
         self.addSubview(titleLabel)
         self.addSubview(subtitleLabel)
-//        self.addSubview(ratingLabel)
         self.addSubview(openButton)
-//        self.addSubview(infoStackView)
         
         setConstraints()
     }
@@ -111,10 +94,6 @@ class AppDetailHeaderView: UIView {
             openButton.widthAnchor.constraint(equalToConstant: 80.0),
             openButton.heightAnchor.constraint(equalToConstant: 32.0),
             
-//            ratingLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.0),
-//            ratingLabel.leftAnchor.constraint(equalTo: imageView.leftAnchor),
-//            ratingLabel.widthAnchor.constraint(equalToConstant: 100.0),
-//            ratingLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
