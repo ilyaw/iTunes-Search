@@ -22,6 +22,7 @@ public struct ITunesApp: Codable {
     public let size: Bytes?
     public let iconUrl: String?
     public let screenshotUrls: [String]
+    public let ageRestrictions: String
     
     // MARK: - Codable
     
@@ -36,6 +37,7 @@ public struct ITunesApp: Codable {
         case size = "fileSizeBytes"
         case iconUrl = "artworkUrl512"
         case screenshotUrls = "screenshotUrls"
+        case ageRestrictions = "contentAdvisoryRating"
     }
     
     public init(from decoder: Decoder) throws {
@@ -50,6 +52,7 @@ public struct ITunesApp: Codable {
         self.size = (try? container.decode(String.self, forKey: .size)) >>- { Bytes($0) }
         self.iconUrl = try? container.decode(String.self, forKey: .iconUrl)
         self.screenshotUrls = (try? container.decode([String].self, forKey: .screenshotUrls)) ?? []
+        self.ageRestrictions = try container.decode(String.self, forKey: .ageRestrictions)
     }
     
     // MARK: - Init
@@ -63,7 +66,8 @@ public struct ITunesApp: Codable {
                   averageRatingForCurrentVersion: Float?,
                   size: Bytes?,
                   iconUrl: String?,
-                  screenshotUrls: [String]) {
+                  screenshotUrls: [String],
+                  ageRestrictions: String) {
         self.appName = appName
         self.appUrl = appUrl
         self.company = company
@@ -74,5 +78,6 @@ public struct ITunesApp: Codable {
         self.size = size
         self.iconUrl = iconUrl
         self.screenshotUrls = screenshotUrls
+        self.ageRestrictions = ageRestrictions
     }
 }
