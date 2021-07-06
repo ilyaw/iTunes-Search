@@ -17,6 +17,7 @@ final class AppDetailViewController: UIViewController {
     lazy var headerViewController = AppDetailHeadViewController(app: app)
     lazy var infoViewController = AppDetailInfoViewController(app: app)
     lazy var whatsNewViewController = AppDetailWhatsNewViewController(app: app)
+    lazy var screenshotsViewController = AppDetailScreenshotsViewController(app: app)
     
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -31,6 +32,7 @@ final class AppDetailViewController: UIViewController {
     init(app: ITunesApp) {
         self.app = app
         self.presenter = AppDetailPresenter()
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -63,6 +65,7 @@ final class AppDetailViewController: UIViewController {
         addChildHeaderViewController()
         addChildInfoViewController()
         addChildWhatsNewViewController()
+        addChildScreenshotsViewController()
     }
 
     private func addScrollView() {
@@ -122,11 +125,24 @@ final class AppDetailViewController: UIViewController {
             whatsNewViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
             whatsNewViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
             whatsNewViewController.view.heightAnchor.constraint(equalToConstant: AppDetailConstants.whatsNewViewSize + sizeText.height),
-            whatsNewViewController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
     
-    
+    private func addChildScreenshotsViewController() {
+        self.addChild(screenshotsViewController)
+        scrollView.addSubview(screenshotsViewController.view)
+        self.screenshotsViewController.didMove(toParent: self)
+        
+        screenshotsViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            screenshotsViewController.view.topAnchor.constraint(equalTo: self.whatsNewViewController.view.bottomAnchor, constant: 10.0),
+            screenshotsViewController.view.leftAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.leftAnchor),
+            screenshotsViewController.view.rightAnchor.constraint(equalTo: self.appDetailView.safeAreaLayoutGuide.rightAnchor),
+            screenshotsViewController.view.heightAnchor.constraint(equalToConstant: 70 + AppDetailConstants.getOptimalSize().height),
+            screenshotsViewController.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
+    }
     
     
 //    private func qwe() {

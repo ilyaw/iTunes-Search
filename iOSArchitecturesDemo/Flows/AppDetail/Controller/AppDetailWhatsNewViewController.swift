@@ -39,13 +39,11 @@ class AppDetailWhatsNewViewController: UIViewController {
         appDetailWhatsNewView.versionLabel.text = "Версия \(app.version)"
         appDetailWhatsNewView.descriptionLabel.text = app.releaseNotes
         
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
         let date = dateFormatter.date(from: app.currentVersionReleaseDate ?? "") ?? Date()
         
         let daysAgo = Calendar.current.dateComponents([.day], from: date, to: Date()).day ?? 0
-        
         
         let lastUpdateTitle = String.localizedStringWithFormat(NSLocalizedString("last update date", comment: ""),
                                                                daysAgo)

@@ -14,11 +14,14 @@
 		09AEE42C269374F100FBE233 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 09AEE42B269374F100FBE233 /* Localizable.stringsdict */; };
 		09AEE431269388DB00FBE233 /* AppDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */; };
 		09AEE4332693947100FBE233 /* AppDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4322693947100FBE233 /* AppDetailConstants.swift */; };
+		09AEE43526939B6F00FBE233 /* AppDetailScreenshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE43426939B6F00FBE233 /* AppDetailScreenshotsViewController.swift */; };
+		09AEE43726939B9200FBE233 /* AppDetailScreenshotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE43626939B9200FBE233 /* AppDetailScreenshotsView.swift */; };
 		09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */; };
 		09ED2096269231C000BF3E83 /* AppDetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */; };
 		09FB1B7B268F0DA0009257EC /* ThreadSaveMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */; };
 		09FB1B7D268F2C6E009257EC /* AppDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB1B7C268F2C6E009257EC /* AppDetailHeaderView.swift */; };
 		09FB1B7F268F42FE009257EC /* AppDetailHeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FB1B7E268F42FE009257EC /* AppDetailHeadViewController.swift */; };
+		09FFF0CC26946B49008DC0CF /* ScreenshotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFF0CB26946B49008DC0CF /* ScreenshotsCell.swift */; };
 		E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2922034A3350011E01A /* AppDelegate.swift */; };
 		E0E1D2952034A3350011E01A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1D2942034A3350011E01A /* SearchViewController.swift */; };
 		E0E1D29A2034A3350011E01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0E1D2992034A3350011E01A /* Assets.xcassets */; };
@@ -49,11 +52,14 @@
 		09AEE42B269374F100FBE233 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailPresenter.swift; sourceTree = "<group>"; };
 		09AEE4322693947100FBE233 /* AppDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailConstants.swift; sourceTree = "<group>"; };
+		09AEE43426939B6F00FBE233 /* AppDetailScreenshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsViewController.swift; sourceTree = "<group>"; };
+		09AEE43626939B9200FBE233 /* AppDetailScreenshotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailScreenshotsView.swift; sourceTree = "<group>"; };
 		09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoView.swift; sourceTree = "<group>"; };
 		09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailInfoViewController.swift; sourceTree = "<group>"; };
 		09FB1B7A268F0DA0009257EC /* ThreadSaveMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSaveMemoryCache.swift; sourceTree = "<group>"; };
 		09FB1B7C268F2C6E009257EC /* AppDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeaderView.swift; sourceTree = "<group>"; };
 		09FB1B7E268F42FE009257EC /* AppDetailHeadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailHeadViewController.swift; sourceTree = "<group>"; };
+		09FFF0CB26946B49008DC0CF /* ScreenshotsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotsCell.swift; sourceTree = "<group>"; };
 		8BE349225151AE13B1EDE333 /* Pods-iOSArchitecturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEA6AF9F424A0D5873D2723 /* Pods_iOSArchitecturesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArchitecturesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A067E149D296BC0C249FD11F /* Pods-iOSArchitecturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArchitecturesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArchitecturesDemo/Pods-iOSArchitecturesDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +120,14 @@
 				09AEE430269388DB00FBE233 /* AppDetailPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		09FFF0CA26946B27008DC0CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				09FFF0CB26946B49008DC0CF /* ScreenshotsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		3E03DA2743EDF39A6844C510 /* Pods */ = {
@@ -267,10 +281,12 @@
 		F8114FC222A3E74E00102830 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				09FFF0CA26946B27008DC0CF /* Cell */,
 				F8114FC422A3E77500102830 /* AppDetailView.swift */,
 				09FB1B7C268F2C6E009257EC /* AppDetailHeaderView.swift */,
 				09ED2093269222B800BF3E83 /* AppDetailInfoView.swift */,
 				09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */,
+				09AEE43626939B9200FBE233 /* AppDetailScreenshotsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +298,7 @@
 				09FB1B7E268F42FE009257EC /* AppDetailHeadViewController.swift */,
 				09ED2095269231C000BF3E83 /* AppDetailInfoViewController.swift */,
 				09AEE4292693650300FBE233 /* AppDetailWhatsNewViewController.swift */,
+				09AEE43426939B6F00FBE233 /* AppDetailScreenshotsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FFF0CC26946B49008DC0CF /* ScreenshotsCell.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				09FB1B7D268F2C6E009257EC /* AppDetailHeaderView.swift in Sources */,
 				09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */,
@@ -477,10 +495,12 @@
 				09FB1B7B268F0DA0009257EC /* ThreadSaveMemoryCache.swift in Sources */,
 				E0E1D395203AE5E20011E01A /* ITunesSearchResult.swift in Sources */,
 				E0E1D392203AE58B0011E01A /* ITunesSearchService.swift in Sources */,
+				09AEE43726939B9200FBE233 /* AppDetailScreenshotsView.swift in Sources */,
 				E0E1D2932034A3350011E01A /* AppDelegate.swift in Sources */,
 				E0E1D384203AE3620011E01A /* AppStartManager.swift in Sources */,
 				F8114FC122A3E5EE00102830 /* AppCellModel.swift in Sources */,
 				09AEE42A2693650300FBE233 /* AppDetailWhatsNewViewController.swift in Sources */,
+				09AEE43526939B6F00FBE233 /* AppDetailScreenshotsViewController.swift in Sources */,
 				09FB1B7F268F42FE009257EC /* AppDetailHeadViewController.swift in Sources */,
 				09AEE4332693947100FBE233 /* AppDetailConstants.swift in Sources */,
 				09AEE431269388DB00FBE233 /* AppDetailPresenter.swift in Sources */,

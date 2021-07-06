@@ -25,6 +25,16 @@ class ThreadSaveMemoryCache {
         return image
     }
     
+    func get(for key: String) -> UIImage? {
+        guard let key = URL(string: key) else { return nil }
+        
+        var image: UIImage?
+        queue.sync {
+            image = cache[key]
+        }
+        return image
+    }
+    
     func set(for url: URL, image: UIImage) {
         queue.async(flags: .barrier) {
             self.cache[url] = image

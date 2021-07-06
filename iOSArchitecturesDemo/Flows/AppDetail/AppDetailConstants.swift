@@ -14,5 +14,30 @@ struct AppDetailConstants {
     
     static let headerViewSize: CGFloat = 140.0
     static let infoViewSize: CGFloat = 55.0
-    static let whatsNewViewSize: CGFloat = 100 //размер текста высчитывается в present
+    static let whatsNewViewSize: CGFloat = 80 //размер текста высчитывается в present
+    
+    private static var _optimalSize: CGSize?
+    
+    ///Оптимальный размер фото для любого экрана
+    static func getOptimalSize() -> CGSize {
+        if let optimalSize = _optimalSize {
+            return optimalSize
+        }
+        
+        let photoWidth: CGFloat = 392
+        let photoHeight: CGFloat = 696
+        let ratio = photoHeight / photoWidth
+        
+        let width = UIScreen.main.bounds.width
+        let third = (width / 2) - (16 * 2)
+        
+        let sizeWidthPhoto = width - third
+        let sizeHeightPhoto = sizeWidthPhoto * ratio
+        
+        let size = CGSize(width: sizeWidthPhoto, height: sizeHeightPhoto)
+        
+        _optimalSize = size
+        
+        return size
+    }
 }
