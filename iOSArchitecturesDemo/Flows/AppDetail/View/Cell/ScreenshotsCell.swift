@@ -16,6 +16,8 @@ class ScreenshotsCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 12
+        imageView.clipsToBounds = true
         return imageView
     }()
     

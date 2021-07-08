@@ -9,6 +9,7 @@
 import UIKit
 
 struct AppDetailConstants {
+    
     static let leftIndent: CGFloat = 16.0
     static let rightIndent: CGFloat = -16.0
     

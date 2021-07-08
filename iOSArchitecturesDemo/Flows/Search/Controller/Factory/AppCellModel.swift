@@ -21,4 +21,4 @@ final class AppCellModelFactory {
                             subtitle: model.company,
                             rating: String(format: "%.1f", model.averageRating ?? 0))
     }
-}
+}       

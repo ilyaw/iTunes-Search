@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0900405A26977FF300297F03 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405926977FF300297F03 /* SongCell.swift */; };
+		0900405D269789D600297F03 /* SongCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405C269789D600297F03 /* SongCellModel.swift */; };
+		09004060269794C200297F03 /* SongDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405F269794C200297F03 /* SongDetailConstants.swift */; };
 		0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE80268F739400F2E1C4 /* SearchPresenter.swift */; };
 		0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */; };
 		09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0900405926977FF300297F03 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		0900405C269789D600297F03 /* SongCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellModel.swift; sourceTree = "<group>"; };
+		0900405F269794C200297F03 /* SongDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailConstants.swift; sourceTree = "<group>"; };
 		0908DE80268F739400F2E1C4 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBulder.swift; sourceTree = "<group>"; };
 		09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewView.swift; sourceTree = "<group>"; };
@@ -98,6 +104,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0900405826977FE800297F03 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F8A97B342249898E00FB2C0E /* AppCell.swift */,
+				0900405926977FF300297F03 /* SongCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0900405B269789C300297F03 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				F8114FC022A3E5EE00102830 /* AppCellModel.swift */,
+				0900405C269789D600297F03 /* SongCellModel.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		0900405E2697949D00297F03 /* SongDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0900405F269794C200297F03 /* SongDetailConstants.swift */,
+			);
+			path = SongDetail;
+			sourceTree = "<group>";
+		};
 		0908DE7F268F738A00F2E1C4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +214,7 @@
 			children = (
 				E0E1D2A62034A36C0011E01A /* Search */,
 				E0E1D2A72034A3780011E01A /* AppDetail */,
+				0900405E2697949D00297F03 /* SongDetail */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -272,8 +305,8 @@
 		F8114FBF22A3E5D500102830 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0900405B269789C300297F03 /* Factory */,
 				E0E1D2942034A3350011E01A /* SearchViewController.swift */,
-				F8114FC022A3E5EE00102830 /* AppCellModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,8 +386,8 @@
 		F8A97B3622498F0C00FB2C0E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0900405826977FE800297F03 /* Cell */,
 				F8114FBD22A3DBF400102830 /* SearchView.swift */,
-				F8A97B342249898E00FB2C0E /* AppCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,12 +508,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0900405A26977FF300297F03 /* SongCell.swift in Sources */,
 				09FFF0CC26946B49008DC0CF /* ScreenshotsCell.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				09FB1B7D268F2C6E009257EC /* AppDetailHeaderView.swift in Sources */,
 				09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
+				09004060269794C200297F03 /* SongDetailConstants.swift in Sources */,
 				09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
@@ -503,6 +538,7 @@
 				09AEE43526939B6F00FBE233 /* AppDetailScreenshotsViewController.swift in Sources */,
 				09FB1B7F268F42FE009257EC /* AppDetailHeadViewController.swift in Sources */,
 				09AEE4332693947100FBE233 /* AppDetailConstants.swift in Sources */,
+				0900405D269789D600297F03 /* SongCellModel.swift in Sources */,
 				09AEE431269388DB00FBE233 /* AppDetailPresenter.swift in Sources */,
 				0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */,
 				0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */,
