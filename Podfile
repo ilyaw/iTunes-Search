@@ -7,5 +7,6 @@ target 'iOSArchitecturesDemo' do
 
   # Pods for iOSArchitecturesDemo
   pod 'Alamofire', '~> 4.6'
-
+  pod 'HCSStarRatingView', '~> 1.5'
+  
 end

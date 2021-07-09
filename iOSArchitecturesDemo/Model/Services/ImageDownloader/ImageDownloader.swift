@@ -14,6 +14,13 @@ typealias DownloadImageCompletion = (_ image: UIImage?, _ error: Error?) -> Void
 final class ImageDownloader {
     
     public func getImage(fromUrl url: URLConvertible, completion: @escaping DownloadImageCompletion) {
+        guard let url = try? url.asURL() else { return }
+        
+        if let image = ThreadSaveMemoryCache.shared.get(for: url) {
+            completion(image, nil)
+            return
+        }
+        
         Alamofire.request(url).response(completionHandler: { (dataResponse) in
             if let error = dataResponse.error {
                 completion(nil, error)
@@ -35,6 +42,8 @@ final class ImageDownloader {
                 
                 return
             }
+            
+            ThreadSaveMemoryCache.shared.set(for: url, image: image)
             
             completion(image, nil)
         })

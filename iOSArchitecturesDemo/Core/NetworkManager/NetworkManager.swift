@@ -11,7 +11,7 @@ import Alamofire
 
 final class NetworkManager {
     
-    public typealias DataCompletion = (Result<Data>) -> Void
+    public typealias DataCompletion = (Result<Data>) -> (Void)
     public typealias JSONCompletion = (Result<[String: Any]?>) -> Void
     
     public func dataRequest(_ request: WebRequest, then completion: DataCompletion?) {
@@ -23,7 +23,7 @@ final class NetworkManager {
                 .withError {
                     self?.logError($0, request: request)
                     completion?(.failure($0))
-            }
+                }
         }
     }
     
@@ -36,7 +36,7 @@ final class NetworkManager {
                 .withError {
                     self?.logError($0, request: request)
                     completion?(.failure($0))
-            }
+                }
         }
     }
     

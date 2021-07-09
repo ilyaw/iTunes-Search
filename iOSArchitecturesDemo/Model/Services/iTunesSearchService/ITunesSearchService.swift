@@ -67,9 +67,9 @@ final class ITunesSearchService {
         parameters[Parameter.query] = query
         parameters[Parameter.regionCode] = regionCode
         parameters[Parameter.mediaType] = MediaType.music.rawValue
-
+        
         let request = WebRequest(method: .get, url: baseUrl, parameters: parameters)
-
+        
         networkManager.dataRequest(request) { [weak self] result in
             guard let self = self else {
                 completion?(.success([]))
