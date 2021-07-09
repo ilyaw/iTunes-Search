@@ -9,5 +9,5 @@
 import UIKit
 
 struct SongDetailConstants {
-    static let coverSongSize: CGSize = CGSize(width: 50.0, height: 50.0)
+    static let smallArtworkSize: CGSize = CGSize(width: 50.0, height: 50.0)
 }

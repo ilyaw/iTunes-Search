@@ -16,7 +16,7 @@ class SongCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "noImage")
-        imageView.layer.cornerRadius = (SongDetailConstants.coverSongSize.width / 2)
+        imageView.layer.cornerRadius = (SongDetailConstants.smallArtworkSize.width / 2)
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -76,8 +76,8 @@ class SongCell: UITableViewCell {
         NSLayoutConstraint.activate([
             self.coverImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8.0),
             self.coverImageView.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 12.0),
-            self.coverImageView.heightAnchor.constraint(equalToConstant: SongDetailConstants.coverSongSize.height),
-            self.coverImageView.widthAnchor.constraint(equalToConstant: SongDetailConstants.coverSongSize.width),
+            self.coverImageView.heightAnchor.constraint(equalToConstant: SongDetailConstants.smallArtworkSize.height),
+            self.coverImageView.widthAnchor.constraint(equalToConstant: SongDetailConstants.smallArtworkSize.width),
             
             self.titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8.0),
             self.titleLabel.leftAnchor.constraint(equalTo: self.coverImageView.rightAnchor, constant: 8.0),

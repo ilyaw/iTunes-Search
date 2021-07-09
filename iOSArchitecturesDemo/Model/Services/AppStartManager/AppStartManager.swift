@@ -18,18 +18,12 @@ final class AppStartManager {
     
     func start() {
         let rootVC = SearchBulder.build()
+        
         rootVC.navigationItem.title = "Search via iTunes"
         
-//        let tabBarVC = UITabBarController()
-//        tabBarVC.setViewControllers([rootVC], animated: false)
-//        tabBarVC.modalPresentationStyle = .fullScreen
-//
-//        let testVC = TestVC()
-//        testVC.navigationItem.title = "Test VC"
-        
         let navVC = self.configuredNavigationController
-                
         navVC.viewControllers = [rootVC]
+        
         
         window?.rootViewController = navVC
         window?.makeKeyAndVisible()
