@@ -96,7 +96,6 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch searchMode {
         case .apps:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AppCell.reuseId, for: indexPath) as? AppCell else { return UITableViewCell() }
@@ -115,17 +114,6 @@ extension SearchViewController: UITableViewDataSource {
             
             return cell
         }
-        
-        
-        
-        //        let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: AppCell.reuseId, for: indexPath)
-        //        guard let cell = dequeuedCell as? AppCell else {
-        //            return dequeuedCell
-        //        }
-        //        let app = self.searchResultApps[indexPath.row]
-        //        let cellModel = AppCellModelFactory.cellModel(from: app)
-        //        cell.configure(with: cellModel)
-        
     }
 }
 
@@ -154,6 +142,7 @@ extension SearchViewController: UISearchBarDelegate {
             searchBar.resignFirstResponder()
             return
         }
+        
         if query.count == 0 {
             searchBar.resignFirstResponder()
             return

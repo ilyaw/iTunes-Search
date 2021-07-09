@@ -23,6 +23,6 @@ final class SongCellModelFactory {
         
         songTitle += model.trackName
         
-        return SongCellModel(songTitle: songTitle, coverPhoto: model.artwork)
+        return SongCellModel(songTitle: songTitle, coverPhoto: model.smallArtwork)
     }
 }

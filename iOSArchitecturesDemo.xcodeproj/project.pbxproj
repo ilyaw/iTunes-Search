@@ -10,6 +10,8 @@
 		0900405A26977FF300297F03 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405926977FF300297F03 /* SongCell.swift */; };
 		0900405D269789D600297F03 /* SongCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405C269789D600297F03 /* SongCellModel.swift */; };
 		09004060269794C200297F03 /* SongDetailConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900405F269794C200297F03 /* SongDetailConstants.swift */; };
+		0900406426983DC800297F03 /* SongDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900406326983DC800297F03 /* SongDetailViewController.swift */; };
+		0900406626983F1E00297F03 /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900406526983F1E00297F03 /* SongDetailView.swift */; };
 		0908DE81268F739400F2E1C4 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE80268F739400F2E1C4 /* SearchPresenter.swift */; };
 		0908DE84268F7DAC00F2E1C4 /* SearchBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */; };
 		09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */; };
@@ -51,6 +53,8 @@
 		0900405926977FF300297F03 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		0900405C269789D600297F03 /* SongCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCellModel.swift; sourceTree = "<group>"; };
 		0900405F269794C200297F03 /* SongDetailConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailConstants.swift; sourceTree = "<group>"; };
+		0900406326983DC800297F03 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		0900406526983F1E00297F03 /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
 		0908DE80268F739400F2E1C4 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		0908DE83268F7DAC00F2E1C4 /* SearchBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBulder.swift; sourceTree = "<group>"; };
 		09AEE4272693642100FBE233 /* AppDetailWhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailWhatsNewView.swift; sourceTree = "<group>"; };
@@ -125,9 +129,27 @@
 		0900405E2697949D00297F03 /* SongDetail */ = {
 			isa = PBXGroup;
 			children = (
+				0900406126983D4400297F03 /* View */,
+				0900406226983D4A00297F03 /* Controller */,
 				0900405F269794C200297F03 /* SongDetailConstants.swift */,
 			);
 			path = SongDetail;
+			sourceTree = "<group>";
+		};
+		0900406126983D4400297F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0900406526983F1E00297F03 /* SongDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0900406226983D4A00297F03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0900406326983DC800297F03 /* SongDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		0908DE7F268F738A00F2E1C4 /* Presenter */ = {
@@ -512,6 +534,7 @@
 				09FFF0CC26946B49008DC0CF /* ScreenshotsCell.swift in Sources */,
 				E0E1D399203AE62E0011E01A /* ITunesApp.swift in Sources */,
 				09FB1B7D268F2C6E009257EC /* AppDetailHeaderView.swift in Sources */,
+				0900406626983F1E00297F03 /* SongDetailView.swift in Sources */,
 				09ED2094269222B800BF3E83 /* AppDetailInfoView.swift in Sources */,
 				F8A97B352249898E00FB2C0E /* AppCell.swift in Sources */,
 				F8114FC522A3E77500102830 /* AppDetailView.swift in Sources */,
@@ -519,6 +542,7 @@
 				09AEE4282693642100FBE233 /* AppDetailWhatsNewView.swift in Sources */,
 				E0E1D387203AE45F0011E01A /* WebRequest.swift in Sources */,
 				F8A1E03C2248382F00FE6448 /* Monads.swift in Sources */,
+				0900406426983DC800297F03 /* SongDetailViewController.swift in Sources */,
 				E0E1D3D4203C4AA50011E01A /* UIColor+Extensions.swift in Sources */,
 				E0E1D3D1203C48D70011E01A /* AppDetailViewController.swift in Sources */,
 				09ED2096269231C000BF3E83 /* AppDetailInfoViewController.swift in Sources */,

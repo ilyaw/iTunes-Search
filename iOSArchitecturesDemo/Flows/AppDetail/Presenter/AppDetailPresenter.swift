@@ -42,12 +42,6 @@ extension AppDetailPresenter: AppDetailViewOutput {
     func getSizeText(text: String) -> CGSize {
         return getLabelSize(text: text, font: UIFont.systemFont(ofSize: 15))
     }
-    
-   
-
-    
-   
-    
 }
 
 
